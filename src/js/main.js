@@ -2,7 +2,7 @@ import './portfolio-api.js';
 import './render-functions.js';
 
 import './header.js';
-import './hero';
+import './hero.js';
 import './about-me.js';
 import './benefits.js';
 import './projects.js';
