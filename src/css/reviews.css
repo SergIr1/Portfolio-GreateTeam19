@@ -2,7 +2,7 @@
 display: flex;
 flex-direction: column;
 border: 1px solid white;
-height: 458px;
+min-height: 458px;
 }
 
 .reviews-container-title{
@@ -16,7 +16,7 @@ height: 458px;
     color: #FAFAFA66;
 }
 .reviews-container-card {
-    height: 302px;
+    /*min-height: 302px;*/
     display:flex;
     justify-content:left;
     border: 1px solid blue;
@@ -50,4 +50,31 @@ height: 458px;
 }
 .reviews-card-name {
     margin-top: 40px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FAFAFA;
+}
+.reviews-card-description {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FAFAFA99;
+}
+.reviews-buttons {
+    height: 99px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 20px;
+    border: 1px blue;
+}
+.reviews-button {
+    height: 68px;
+    width: 68px;
+    border-radius: 60px;
+    padding: 18px;
+    border: 1px yellow;
+    background: #1c1d20;
+
 }
