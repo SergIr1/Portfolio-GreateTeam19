@@ -1,11 +1,62 @@
 <section class="section-paddings">
     <div class="container">
         <h2 class="visually-hidden">About me as a Full Stack Web Developer</h2>
+        <div class="about-me-wraperr">
+            <div class="about-me-wraperr-text">
+                <p class="about-me-text">I work with people all over the world to create impressive and <span
+                        class="about-me-part-text">functional</span> <span class="accent-color-second">websites</span>
+                    that
+                    reflect each client's unique
+                    personality.</p>
+            </div>
+            <picture>
+                <source srcset="/img/about-me/desktop-about-me.jpg 1x, /img/about-me/desktop-about-me@2x.jpg 2x" media="(min-width:
+                1440px)" />
 
-        <p class="about-me-text">I work with people all over the world to create impressive and <span
-                class="about-me-first-part-text">functional</span> <span
-                class="about-me-second-part-text">websites</span> that
-            reflect each client's unique
-            personality.</p>
+                <source srcset="/img/about-me/tablet-about-me.jpg 1x, /img/about-me/tablet-about-me@2x.jpg 2x"
+                    media="(min-width:768px)" />
+
+                <source srcset="/img/about-me/mobile-about-me.jpg 1x, /img/about-me/mobile-about-me@2x.jpg 2x"
+                    media="(max-width:767px)" />
+
+                <img class="about-me-img" src="/img/about-me/tablet-about-me.jpg" alt="about-me">
+            </picture>
+
+            <ul class="about-me-accordion-list accordion-container">
+                <li class="about-me-accordion-item ac">
+                    <h3 class="about-me-accordion-title ac-header">about me
+                        <button class="ac-trigger about-me-accordion-btn" type="button"><svg
+                                class="about-me-accordion-svg" width="20" height="20">
+                                <use href="../img/icons.svg#icon-Icon-up"></use>
+                            </svg></button>
+                    </h3>
+                    <div class="ac-panel">
+                        <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </li>
+                <li class="about-me-accordion-item ac">
+                    <h3 class="about-me-accordion-title ac-header">role
+                        <button class="ac-trigger about-me-accordion-btn" type="button"><svg
+                                class="about-me-accordion-svg" width="20" height="20">
+                                <use href="../img/icons.svg#icon-Icon-up"></use>
+                            </svg></button>
+                    </h3>
+                    <div class="ac-panel">
+                        <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </li>
+                <li class="about-me-accordion-item ac">
+                    <h3 class="about-me-accordion-title ac-header">education
+                        <button class="ac-trigger about-me-accordion-btn" type="button"><svg
+                                class="about-me-accordion-svg" width="20" height="20">
+                                <use href="../img/icons.svg#icon-Icon-up"></use>
+                            </svg></button>
+                    </h3>
+                    <div class="ac-panel">
+                        <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 </section>
