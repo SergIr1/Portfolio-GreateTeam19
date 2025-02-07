@@ -1,3 +1,7 @@
+@import "accordion-js/dist/accordion.min.css";
+@import "simplelightbox/dist/simple-lightbox.min.css";
+@import 'swiper/css';
+
 body {
   font-family: "Inter Tight", serif;
   color: #fafafa;
