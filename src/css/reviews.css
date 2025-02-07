@@ -74,7 +74,12 @@ min-height: 458px;
     width: 68px;
     border-radius: 60px;
     padding: 18px;
-    border: 1px yellow;
-    background: #1c1d20;
-
+    border: 1px solid  #FAFAFA99;
+    background-color: inherit;
+}
+.active {
+    border: 1px solid #FAFAFA;
+}
+.reviews-button-icon {
+    fill: red;
 }
