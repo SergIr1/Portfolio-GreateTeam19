@@ -1,0 +1,205 @@
+/* Styles for Mobile devices */
+.work-together {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background-image: url(../img/footer/mobile-elements.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.work-together-title-wrap {
+  display: flex;
+}
+.work-together-title {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #fafafa;
+}
+
+.work-together-logo-image {
+  border-radius: 12px;
+  margin-right: 8px;
+  width: 44px;
+  height: 44px;
+}
+
+.work-together-special-color {
+  color: #c6e327;
+}
+
+.work-together-form-container {
+  margin-top: 63px;
+}
+
+.work-together-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.work-together-form-input,
+.textarea-input {
+  width: 100%;
+  max-width: 350px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  background: transparent;
+  color: white;
+  outline: none;
+  font-family: 'Inter Tight', sans-serif;
+  height: 44px;
+}
+
+.textarea-input {
+  resize: none;
+  padding-top: 12px;
+  padding-bottom: 10px;
+}
+
+.work-together-form-input::placeholder,
+.textarea-input::placeholder {
+  color: rgba(250, 250, 250, 0.2);
+}
+
+.work-together-btn {
+  width: 100px;
+  height: 100px;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  background-color: #c6e327;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.work-together-btn:hover {
+  background-color: #3cbc81;
+}
+
+.work-together-contact-info {
+  display: flex;
+  gap: 4px;
+  margin-top: 64px;
+  align-items: flex-start;
+}
+
+.work-together-contact-link,
+.tel-link {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  padding: 10px 12px;
+  width: auto; /* Ширина подстраивается под текст */
+  height: 37px;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  font-style: normal;
+  line-height: 1;
+  color: #fafafa;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.work-together-contact-link:hover,
+.tel-link:hover {
+  background: #3cbc81;
+}
+
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+  .work-together {
+    padding-top: 80px;
+    background-image: url(../img/footer/tablet-elements.jpg);
+  }
+
+  .container {
+    padding-left: 32px;
+  }
+
+  .work-together-title {
+    font-size: 64px;
+  }
+
+  .work-together-logo-image {
+    border-radius: 24px;
+    margin-right: 20px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .work-together-form-container {
+    margin-top: 64px;
+  }
+
+  .work-together-contact-form {
+    flex-direction: row;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .work-together-form-input,
+  .textarea-input {
+    max-width: 245px;
+  }
+
+  .work-together-btn {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+  }
+
+  .work-together-contact-info {
+    gap: 8px;
+    margin-top: 78px;
+    align-items: flex-start;
+  }
+
+  .work-together-contact-link,
+  .tel-link {
+    padding: 18px 32px;
+    font-size: 16px;
+    height: auto;
+  }
+}
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1280px) {
+  .work-together {
+    background-image: url(../img/footer/desktop-elements.webp);
+  }
+  .container {
+    padding-left: 196px;
+  }
+
+  .work-together-form-input,
+  .textarea-input {
+    max-width: 390px;
+  }
+
+  .work-together-btn {
+    margin-left: 54px;
+  }
+}
