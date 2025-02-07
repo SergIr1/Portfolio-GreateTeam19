@@ -18,7 +18,6 @@
   margin-bottom: 32px;
 }
 .ps-swiper-slide {
-  /* border-radius: 24px; */
 }
 .ps-slide-content {
 }
@@ -60,6 +59,8 @@
 }
 .ps-btn:hover {
   background: #3cbc81;
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
 }
 .ps-image-block {
   border-bottom-left-radius: 24px;
@@ -67,8 +68,7 @@
   padding: 100px 16px;
   background: #242527;
 }
-.ps-image {
-}
+
 .ps-slide-button-container {
   display: flex;
   gap: 12px;
@@ -80,12 +80,16 @@
   padding: 14px;
   width: 52px;
   height: 52px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .ps-arrow-icon {
   stroke-width: 2px;
   stroke: #fafafa;
-  color: #fafafa;
+  fill: none;
 }
 .ps-swiper-button-prev {
   border: 1px solid rgba(250, 250, 250, 0.5);
@@ -93,4 +97,85 @@
   padding: 14px;
   width: 52px;
   height: 52px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-button-next svg,
+.swiper-button-prev svg {
+  fill: white;
+}
+
+.ps-swiper-button-next.ps-swiper-button-disabled,
+.ps-swiper-button-prev.ps-swiper-button-disabled {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  background-color: rgba(250, 250, 250, 0.2);
+  cursor: not-allowed;
+}
+
+/* MEDIA */
+
+@media screen and (min-width: 768px) {
+  .projects {
+    margin-bottom: 96px;
+  }
+  .ps-swiper-wrapper {
+    margin-bottom: 64px;
+  }
+  .ps-description-blocks {
+    padding: 64px;
+  }
+  .ps-program-block {
+    margin-bottom: 164px;
+  }
+  .ps-program-name {
+    padding: 18px;
+  }
+  .ps-subtitle {
+    font-size: 44px;
+    line-height: 100%;
+  }
+  .ps-btn {
+    padding: 18px 50px;
+  }
+  .ps-image-block {
+    padding: 120px 45px;
+  }
+  .ps-slide-button-container {
+    gap: 20px;
+  }
+  .ps-swiper-button-next {
+    padding: 18px;
+    width: 68px;
+    height: 68px;
+  }
+  .ps-swiper-button-prev {
+    padding: 18px;
+    width: 68px;
+    height: 68px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .projects {
+    margin-bottom: 164px;
+  }
+  .ps-swiper-slide {
+  }
+  .ps-slide-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .ps-description-blocks {
+    border-radius: 24px 0 0 24px;
+  }
+
+  .ps-program-block {
+    margin-bottom: 223px;
+  }
+  .ps-image-block {
+    padding: 120px 37px;
+    border-radius: 0 24px 24px 0;
+  }
 }
