@@ -1,15 +1,26 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const coversSection = document.querySelector(".covers");
+function isSectionInViewport() {
+    const section = document.querySelector('.covers');
+    const rect = section.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        document.querySelector(".cover-list").style.animationPlayState = "running";
-      } else {
-        document.querySelector(".cover-list").style.animationPlayState = "paused";
-      }
-    });
-  });
+window.addEventListener('scroll', () => {
+    if (isSectionInViewport()) {
+        document.querySelectorAll('.cover-list').forEach((list) => {
+            list.style.animationPlayState = 'running';
+        });
+    } else {
+        document.querySelectorAll('.cover-list').forEach((list) => {
+            list.style.animationPlayState = 'paused';
+        });
+    }
+});
 
-  observer.observe(coversSection);
+document.querySelectorAll('.cover-list').forEach((list) => {
+    list.style.animationPlayState = 'paused';
 });

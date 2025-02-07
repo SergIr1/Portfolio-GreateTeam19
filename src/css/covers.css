@@ -1,88 +1,101 @@
-
 body {
     margin: 0;
-    font-family: "Pridi", sans-serif;
-    background: (rgba(217, 217, 217, 0.04), rgba(0, 0, 0, 0.8));
-    backdrop-filter: blur(30px);
-    color: #fff;
-    width: 1440px;
-    height: 950px;
-    overflow-x: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-.covers {
+  .covers { 
+     margin: 0;
+    height: 100vh;
+    background-image: url('ellipse-03.png'); 
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+
+} 
+
+.container {
     position: relative;
-    overflow: hidden;
-    padding: 20px 0;
+  
 }
 
-.cover-list {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    animation: scroll 30s linear infinite;
+.cover-pic {
+    position: absolute;
+    right: -800px;
+    left: 0;
+    overflow: hidden;
+    font-family: "Pridi", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
     
 }
 
+.cover-line {
+    height: auto;
+    display: flex;
+    transform: rotate(16deg);
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 40px;
+    z-index: 3;
+}
+
+.cover-list {
+     display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
 .cover-list li {
+    background-color: rgb(217, 217, 217, 0.04);
     flex-shrink: 0;
-    width: 272px;
-    height: auto;
-    margin: 10px;
-    transform: rotate(5deg);
-    transition: transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% / 8);
+    white-space: nowrap;
+    animation-name: marqueeLine;
+    animation-duration: 15s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  
 }
 
-.cover-list li:hover {
-    transform: rotate(0);
+.ellipse {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: rgba(198, 227, 39, 1);
+    filter: blur(50px);
+    z-index: 1;
 }
 
-.cover-list img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 0px;
+.ellipse1 {
+    left: 428px;
+    top: 0px;
 }
 
-@keyframes scroll {
+.ellipse2 {
+    left: 0px;
+    top: 198px;
+}
+
+.ellipse3 {
+    left: 1178px;
+    top: 714px;
+}
+
+@keyframes marqueeLine {
     0% {
         transform: translateX(0);
     }
 
     100% {
         transform: translateX(-100%);
-    }
-}
-
-@media (max-width: 1024px) {
-    .cover-list li {
-        width: 150px;
-    }
-}
-
-@media (max-width: 768px) {
-    .cover-list li {
-        width: 120px;
-    }
-}
-@media (max-width: 480px) {
-    .cover-list li {
-        width: 100%;
     }
 }
