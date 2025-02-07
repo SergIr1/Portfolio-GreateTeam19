@@ -26,11 +26,70 @@
     margin-bottom: 32px;
 }
 
-.about-me-accordion-btn {
-    background-color: #ed3b44;
+.about-me-accordion-item.ac {
+    border: none;
+    border-bottom: 1px solid #FAFAFA;
+    background-color: #1c1d20;
+    color:#1c1d20;
 }
 
-.about-me-accordion-svg {
-    fill:black;
-    stroke: black;
+.about-me-accordion-wrapper-title{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.about-me-accordion-title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    background-color: #1c1d20;
+
+}
+
+.ac .about-me-accordion-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 50%;
+    padding: 9px;
+    width: 36px;
+    height: 36px;
+}
+
+.about-me-accordion-icon {
+    width: 18px;
+    height: 18px;
+    fill:none;
+    stroke: #fafafa;
+    transition: transform 250ms linear;
+}
+
+.ac .ac-trigger::after{
+    content: none;
+}
+
+.ac .ac-panel .about-me-accordion-text{
+    display: block;
+    padding: 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: #fafafa;
+}
+
+.ac .ac-panel .about-me-accordion-text:not(:last-child){
+    margin-bottom: 32px;
+}
+
+.ac .ac-panel .about-me-accordion-text:last-child{
+    padding-bottom: 20px;
+}
+
+.is-active .about-me-accordion-icon{
+    transform: rotate(180deg);
 }
