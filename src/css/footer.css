@@ -1,10 +1,13 @@
 /* Styles for Mobile devices */
+
 .work-together {
   padding-top: 32px;
   padding-bottom: 32px;
   background-image: url(../img/footer/mobile-elements.webp);
   background-size: cover;
   background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: right center;
 }
 
 .container {
@@ -128,6 +131,68 @@
   background: #3cbc81;
 }
 
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s;
+  z-index: 1000;
+}
+
+.modal-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background: #1c1d20;
+  border: 1px solid rgba(250, 250, 250, 0.1);
+  border-radius: 20px;
+  padding: 64px 32px;
+  text-align: center;
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.modal-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.modal-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: rgba(250, 250, 250, 0.6);
+  max-width: 364px;
+  margin: 0 auto;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
   .work-together {
@@ -183,10 +248,21 @@
     font-size: 16px;
     height: auto;
   }
+
+  .modal-content {
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 492px;
+    height: 246px;
+  }
+
+  .modal-text {
+  }
 }
 
 /* Styles for Desktop devices */
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1440px) {
   .work-together {
     background-image: url(../img/footer/desktop-elements.webp);
   }
