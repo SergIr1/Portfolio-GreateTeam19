@@ -13,13 +13,6 @@ const initAccordion = () => {
 // ============================================= swiper =============================================
 const swiperBtnEl = document.querySelector('.about-me-swiper-btn');
 
-swiperBtnEl.addEventListener('click', () => {
-    const firstSlide = document.querySelector('.swiper-slide');
-    if (firstSlide) {
-        firstSlide.classList.remove('active-slide-first');
-    }
-});
-
     const updateActiveSlide = () => {
         document.querySelectorAll('.swiper-slide').forEach(slide => {
             slide.classList.remove('active-slide');
@@ -58,4 +51,11 @@ const initSwiper = () => {
 document.addEventListener("DOMContentLoaded", function () {
     initAccordion();
     initSwiper();
+    
+    swiperBtnEl.addEventListener('click', () => {
+    const firstSlide = document.querySelector('.swiper-slide');
+    if (firstSlide) {
+        firstSlide.classList.remove('active-slide-first');
+    }
+});
 });
