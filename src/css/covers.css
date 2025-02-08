@@ -27,7 +27,7 @@ body {
     position: absolute;
     right: -800px;
     left: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
     font-family: "Pridi", sans-serif;
     font-weight: 600;
     font-size: 20px;
@@ -55,12 +55,12 @@ body {
     background-color: rgb(217, 217, 217, 0.04);
     flex-shrink: 0;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
-    width: calc(100% / 8);
+    width: calc(100% / 4);
     white-space: nowrap;
     animation-name: marqueeLine;
-    animation-duration: 15s;
+    animation-duration: 10s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
   
@@ -72,7 +72,7 @@ body {
     height: 350px;
     background: rgba(198, 227, 39, 1);
     filter: blur(50px);
-    z-index: 1;
+    z-index: 0;
 }
 
 .ellipse1 {
@@ -97,5 +97,28 @@ body {
 
     100% {
         transform: translateX(-100%);
+    }
+}
+
+/* Styles for Mobile devices */
+.container {
+    min-width: 320px;
+    max-width: 375px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+        padding: 0 32px;
+    }
+}
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1440px) {
+    .container {
+        max-width: 1440px;
     }
 }
