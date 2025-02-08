@@ -1,8 +1,390 @@
 /* Стили для header */
+html {
+    scroll-behavior: smooth;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    height: 80px;
+    padding: 0 32px;
+    position: absolute;
+    flex-wrap: nowrap;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    /* Выравниваем элементы по центру */
+    position: relative;
+    width: 172px;
+    height: 80px;
+    gap: 8px;
+}
 
+.logo-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 18px;
+}
+
+.jefferson-text {
+    position: relative;
+    top: 0;
+    /* Убираем смещение по оси Y */
+    left: 10px;
+    /* Немного сдвигаем вправо */
+    color: #FAFAFA;
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24.2px;
+    letter-spacing: -2%;
+    text-decoration: none;
+}
+
+.menu-btn {
+    
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19.36px;
+    letter-spacing: -2%;
+    text-decoration: underline solid;
+    text-underline-offset: auto;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    color: #FAFAFA;
+    position: relative;
+}
+
+.menu-btn:hover {
+    text-decoration: underline solid #0073e6;
+}
+
+/* Стили для меню */
+.menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 67px;
+    height: 91px;
+    text-align: center;
+    color: #FAFAFA;
+}
+
+.menu-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-btn:hover+.menu {
+    display: block;
+}
+
+.menu.show {
+    display: block;
+}
+
+.menu-wrapper:hover .menu {
+    display: block;
+}
+
+/* Стили для пунктов меню */
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin: 10px 0;
+}
+
+.menu ul li a {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19.36px;
+    letter-spacing: -2%;
+    text-decoration: none;
+    color: #FAFAFA;
+    white-space: nowrap;
+}
+
+.menu ul li a:hover {
+    text-decoration: underline;
+    color: #ED3B44;
+}
+
+/* кнопка order the project */
+.order-btn {
+    width: 177px;
+    height: 55px;
+    border-radius: 60px;
+    padding: 18px 50px;
+    gap: 10px;
+    background-color: #ED3B44;
+}
+
+.order-btn {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19.36px;
+    letter-spacing: -2%;
+    text-decoration: none;
+    color: #FAFAFA;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+/* Общие стили */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter Tight', sans-serif;
+    background-color: #1a1a1a;
+}
+
+  .close-btn {
+      display: none;
+      /* Скрываем крестик */
+  }
+  
+  .menu-btn-mobil {
+    display: none;
+  }
+
+/* Для планшетов (с 768px и выше) */
+@media screen and (max-width: 768px) {
+
+    /* Header адаптируем */
+    .header {
+        flex-direction: row;
+        align-items: center;
+        height: auto;
+        padding: 10px;
+        justify-content: space-between;
+    }
+
+    /* Логотип и текст */
+    .logo {
+        gap: 8px;
+        width: auto;
+        height: auto;
+        text-align: left;
+    }
+
+    .logo-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .jefferson-text {
+        font-size: 18px;
+        position: relative;
+        /* Убираем absolute, чтобы текст не сдвигался */
+        top: 0;
+        /* Убираем смещение */
+        left: 10px;
+        /* Сдвигаем немного вправо */
+    }
+
+    /* Меню */
+    .menu-btn {
+        font-size: 18px;
+        padding: 12px 30px;
+    }
+
+    .menu {
+        top: 110%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+    }
+
+    .menu ul li {
+        margin: 15px 0;
+    }
+
+    .order-btn {
+        width: 200px;
+        height: 50px;
+        font-size: 18px;
+        padding: 12px 30px;
+        border-radius: 30px;
+    }
+
+}
+
+/* Для мобильных устройств (с 480px и ниже) */
+@media screen and (max-width: 480px) {
+      
+    
+    .menu-btn {
+        display: none;
+    }
+
+    .order-btn {
+            display: none;
+            /* Скрываем кнопку "Order the project" */
+        }
+
+    
+        .menu-wrapper {
+            position: relative;
+            /* Убедимся, что кнопка меню в правом верхнем углу */
+        }
+    
+        /* Header адаптируем */
+        .header {
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+        }
+    
+        /* Логотип */
+        .logo {
+            width: 100%;
+            text-align: center;
+        }
+    
+        .jefferson-text {
+            font-size: 16px;
+        }
+    
+        /* Кнопка меню для мобильных */
+                .menu-btn-mobil {
+                    display: block;
+                    position: fixed;
+                    top: 9.92px;
+                    right: 3.5px;
+                    width: 21px;
+                    height: 8.17px;
+                    background: none;
+                    border: none;
+                    outline: none;
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    z-index: 1000;
+                }
+        
+                /* Линии внутри кнопки */
+                .menu-btn-mobil .line {
+                    width: 100%;
+                    height: 2px;
+                    /* Толщина линий */
+                    background-color: #FAFAFA;
+                    /* Цвет линий */
+                    border-radius: 2px;
+                }
+    
+        /* Меню на мобильных */
+        .menu {
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: #fff;
+            text-align: center;
+            z-index: 999;
+            transition: all 0.3s ease;
+            
+        }
+    
+        /* Когда меню открыто */
+        .menu.show {
+            display: block;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transform: translateY(0);
+            opacity: 1;
+        }
+                .menu.hide {
+                    opacity: 0;
+                }
+    
+        .menu ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+    
+        .menu ul li {
+            margin: 20px 0;
+        }
+    
+        .menu ul li a {
+            font-family: 'Inter Tight', sans-serif;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19.36px;
+                letter-spacing: -2%;
+                text-decoration: underline solid;
+        }
+    
+        .menu ul li a:hover {
+            color: #ED3B44;
+        }
+    
+        /* Кнопка закрытия меню */
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: #FAFAFA;
+            cursor: pointer;
+        }
+            /* Скрытие кнопки с полосками при открытом меню */
+            .menu.show .menu-btn-mobil {
+                    display: none;
+                }
+          
+            /* Показ кнопки с крестиком при открытом меню */
+            .menu.show .close-btn {
+                    display: block;
+                }
+                .close-btn {
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    display: none;
+                    font-size: 24px;
+                    color: #FAFAFA;
+                    cursor: pointer;
+                    z-index: 9999;
+                    width: 30px;
+                    height: 30px;
+                    background: none;
+                        border: none;
+                        outline: none;
+                }
+        
+                /* Крестик (для использования вместо двух линий) */
+                .close-btn svg {
+                    width: 100%;
+                    height: 100%;
+                }
+    }

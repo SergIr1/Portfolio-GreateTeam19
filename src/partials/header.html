@@ -1,13 +1,41 @@
-<header>
+<header class="header">
     <!-- Логотип -->
     <div class="logo">
-        <img src="path/to/logo.png" alt="Logo">
+        <img src="../img/logo.webp" alt="Logo" class="logo-img">
         <span class="jefferson-text">jefferson*</span>
     </div>
 
+
+
     <!-- Меню -->
-    <button class="menu-btn">Menu</button>
+    <div class="menu-wrapper">
+        <!--кнопка для открытия меню в мб-->
+        <button class="menu-btn-mobil">
+            <span class="line"></span>
+            <span class="line"></span>
+
+        </button>
+
+        <button class="menu-btn">Menu</button>
+        <nav class="menu">
+            <!-- Кнопка для закрытия меню -->
+            <button class="close-btn">
+                <svg class="icon">
+                    <use xlink:href="../img/icons.svg#icon-x"></use>
+                </svg>
+            </button>
+            <ul>
+                <li><a href="#aboutMe">About me</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+
+        </nav>
+    </div>
 
     <!-- Кнопка Order the project -->
-    <button class="order-btn">Order the project</button>
+    <a href="#workTogether">
+        <button class="order-btn">Order the project</button>
+    </a>
 </header>
