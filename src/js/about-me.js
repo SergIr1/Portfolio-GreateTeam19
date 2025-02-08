@@ -1,21 +1,53 @@
 import Accordion from "accordion-js";
+import Swiper from 'swiper';
+import { Navigation, Keyboard } from 'swiper/modules';
 
+const initAccordion = () => {
+    const acordionFirstItem = new Accordion(".accordion-container", {
+        duration: 400,
+        showFirst: true,
+    });
+    acordionFirstItem.open(0);
+}
 
-// const accordion = new Accordion(".about-me-accordion-container-list");
+// ============================================= swiper =============================================
 
-// const accardionBtnEl = document.querySelector('.about-me-accordion-container-btn');
+    const updateActiveSlide = () => {
+        document.querySelectorAll('.swiper-slide').forEach(slide => {
+            slide.classList.remove('active-slide');
+        });
 
-// console.log(accardionBtnEl)
+        const activeSlide = document.querySelector('.swiper-slide-active');
+        if (activeSlide) {
+            activeSlide.classList.add('active-slide');
+        }
+}
+updateActiveSlide();
+    
+const initSwiper = () => {
+    const swiper = new Swiper('.swiper', {
+        modules: [Navigation, Keyboard],
+        speed: 400,
+        slidesPerView: 2,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+        },
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+        },
+        breakpoints: {
+            768: { slidesPerView: 3 },
+            1024: { slidesPerView: 6 }
+        },
+        on: {
+            slideChangeTransitionEnd: updateActiveSlide,
+        }
+    });
+}
 
-// document.addEventListener("DOMContentLoaded", initAccordion);
-
-// function initAccordion() {
-//   const accordion = new Accordion(".about-me-accordion-container-list", {
-//     duration: 400, 
-//     showFirst: true,
-//   });
-
-//   console.log("Accordion initialized:", accordion);
-// }
-
-new Accordion(".accordion-container")
+document.addEventListener("DOMContentLoaded", function () {
+    initAccordion();
+    initSwiper();
+});
