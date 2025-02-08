@@ -44,7 +44,7 @@ const initSwiper = () => {
             slideChangeTransitionEnd: updateActiveSlide,
         }
     });
-    console.log(swiper)
+
 }
 
 document.addEventListener("DOMContentLoaded", function () {
