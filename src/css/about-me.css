@@ -190,12 +190,12 @@
     transition: background-color 250ms linear, border 250ms linear;
 }
 
-.swiper-slide {
-    transition: background-color 250ms, border 250ms;
-    background-color: transparent;
+.swiper-slide.active-slide {
+    background-color: #c6e327;
+    border: none;
 }
 
-.swiper-slide.active-slide {
+.active-slide-first {
     background-color: #c6e327;
     border: none;
 }
