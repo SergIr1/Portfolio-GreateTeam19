@@ -1,3 +1,4 @@
+import './module-libs.js';
 import './portfolio-api.js';
 import './render-functions.js';
 

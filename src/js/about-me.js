@@ -1,9 +1,7 @@
-import Accordion from "accordion-js";
-import Swiper from 'swiper';
-import { Navigation, Keyboard } from 'swiper/modules';
+import { Accordion, Swiper, Navigation, Keyboard } from './module-libs';
 
 const initAccordion = () => {
-    const acordionFirstItem = new Accordion(".accordion-container", {
+    const acordionFirstItem = new Accordion(".about-me-accordion-list.accordion-container", {
         duration: 400,
         showFirst: true,
     });
@@ -14,7 +12,7 @@ const initAccordion = () => {
 const swiperBtnEl = document.querySelector('.about-me-swiper-btn');
 
     const updateActiveSlide = () => {
-        document.querySelectorAll('.swiper-slide').forEach(slide => {
+        document.querySelectorAll('.about-me-swiper-item.swiper-slide').forEach(slide => {
             slide.classList.remove('active-slide');
         });
 
@@ -26,13 +24,13 @@ const swiperBtnEl = document.querySelector('.about-me-swiper-btn');
 updateActiveSlide();
     
 const initSwiper = () => {
-    const swiper = new Swiper('.swiper', {
+    const swiper = new Swiper('.about-me-swiper-gen-wrap.swiper', {
         modules: [Navigation, Keyboard],
         speed: 400,
         slidesPerView: 2,
         loop: true,
         navigation: {
-            nextEl: '.swiper-button-next',
+            nextEl: '.about-me-swiper-btn.swiper-button-next',
         },
         keyboard: {
             enabled: true,
@@ -40,12 +38,13 @@ const initSwiper = () => {
         },
         breakpoints: {
             768: { slidesPerView: 3 },
-            1024: { slidesPerView: 6 }
+            1440: { slidesPerView: 6 }
         },
         on: {
             slideChangeTransitionEnd: updateActiveSlide,
         }
     });
+
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -53,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
     initSwiper();
     
     swiperBtnEl.addEventListener('click', () => {
-    const firstSlide = document.querySelector('.swiper-slide');
+    const firstSlide = document.querySelector('.about-me-swiper-item.swiper-slide');
     if (firstSlide) {
         firstSlide.classList.remove('active-slide-first');
     }
