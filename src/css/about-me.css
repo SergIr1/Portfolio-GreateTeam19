@@ -119,7 +119,11 @@
     transition: transform 250ms linear;
 }
 
+<<<<<<< HEAD
 .ac .ac-trigger::after{
+=======
+.about-me-accordion-btn.ac-trigger::after{
+>>>>>>> main
     content: none;
 }
 
@@ -157,7 +161,11 @@
     align-items: center;
 }
 
+<<<<<<< HEAD
 .swiper {
+=======
+.about-me-swiper-gen-wrap.swiper {
+>>>>>>> main
     display: flex;
     align-items: center;
     max-width: 260px;
@@ -167,10 +175,17 @@
     overflow: hidden;
 }
 
+<<<<<<< HEAD
 .swiper-wrapper {
     display: flex;
     max-width: 260px;
 }
+=======
+/* .swiper-wrapper {
+    display: flex;
+    max-width: 260px;
+} */
+>>>>>>> main
 
 .about-me-swiper-item {
     display: flex;
@@ -181,7 +196,11 @@
     border: 1px solid rgba(250, 250, 250, 0.2);
 }
 
+<<<<<<< HEAD
 .swiper-slide {
+=======
+.about-me-swiper-item.swiper-slide {
+>>>>>>> main
     width: 130px;
     height: 130px;
     border-radius: 50%;
@@ -195,7 +214,11 @@
     border: none;
 }
 
+<<<<<<< HEAD
 .active-slide-first {
+=======
+.swiper-slide.active-slide-first {
+>>>>>>> main
     background-color: #c6e327;
     border: none;
 }
@@ -233,11 +256,19 @@
 }
 
 @media only screen and (min-width: 768px){
+<<<<<<< HEAD
     .swiper{
         max-width: 600px;
     }
 
     .swiper-slide{
+=======
+    .about-me-swiper-gen-wrap.swiper{
+        max-width: 600px;
+    }
+
+    .about-me-swiper-item.swiper-slide{
+>>>>>>> main
     width: 200px;
     height: 200px;
     }
@@ -253,7 +284,11 @@
 }
 
 @media only screen and (min-width: 1440px){
+<<<<<<< HEAD
     .swiper {
+=======
+    .about-me-swiper-gen-wrap.swiper {
+>>>>>>> main
             max-width: 1200px;
         }
 }
