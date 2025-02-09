@@ -92,5 +92,3 @@ const updateArrowStatus = (swiper) => {
 document.addEventListener("DOMContentLoaded", function () {
     initSwiperReviews();
     });
-       
- 
