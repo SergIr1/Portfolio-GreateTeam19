@@ -2,6 +2,7 @@
     opacity: 0;
     transform: translateY(-30px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    padding-bottom: 32px;
 }
 .hero {
     background-image: url(../img/hero/hero.webp);
@@ -48,9 +49,7 @@
 }
 .hero-links-wrapper {
     display: flex;
-   
     align-items: center;
-    margin-bottom: 32px;
     gap: 4px;
     /* margin-left: 16px;
     margin-right: 16px; */
