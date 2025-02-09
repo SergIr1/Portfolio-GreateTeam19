@@ -6,7 +6,7 @@ const btnContainer= document.querySelector('.reviews-buttons');
 
 const renderReviews = info =>{
     return `
-    <li class="reviews-card">
+    <li class="reviews-card swiper-slide">
                 <img class="reviews-card-avatar" src="${info.avatar_url}"></img>
                 <h4 class="reviews-card-name">${info.author}</h4>
                 <p class="reviews-card-description">${info.review}</p>
@@ -41,15 +41,11 @@ fetch('https://portfolio-js.b.goit.study/api/reviews')
 
 //--swiper--//
 
-// const unpdateArrowStatus = () => {
-//     if
-// }
-
  const initSwiperReviews = () => {
     const swiper = new Swiper('.reviews-container-card.swiper', {
         modules: [Navigation, Keyboard],
         speed: 400,
-        slidesPerView: 2,
+        slidesPerView: 1,
         loop: false,
         navigation: {
            nextEl: '.reviews-button.swiper-button-next',
@@ -61,16 +57,40 @@ fetch('https://portfolio-js.b.goit.study/api/reviews')
        },
        breakpoints: {
           768: { slidesPerView: 2 },
-          1024: { slidesPerView: 4 }
-       }
-//    on: {
-//         slideChangeTransitionEnd: updateActiveCards,
-//    }
+          1440: { slidesPerView: 4 }
+       },
+       on: {
+        init: function () {
+        updateArrowStatus(this);
+        },
+        slideChange: function () {
+        updateArrowStatus(this);
+        }
+        }
 });
 }
+const updateArrowStatus = (swiper) => {
+        const prevBtn = document.querySelector('.reviews-button-left');
+        const nextBtn = document.querySelector('.reviews-button-right');
+        
+        if (swiper.isBeginning) {
+            prevBtn.setAttribute('disabled', true);
+            prevBtn.classList.add('disabled');
+        } else {
+            prevBtn.removeAttribute('disabled');
+            prevBtn.classList.remove('disabled');
+        }
+        
+        if (swiper.isEnd) {
+            nextBtn.setAttribute('disabled', true);
+            nextBtn.classList.add('disabled');
+        } else {
+            nextBtn.removeAttribute('disabled');
+            nextBtn.classList.remove('disabled');
+        }
+        };
 document.addEventListener("DOMContentLoaded", function () {
-
     initSwiperReviews();
     });
-    
+       
  

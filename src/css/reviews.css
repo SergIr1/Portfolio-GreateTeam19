@@ -1,109 +1,109 @@
 .reviews-container {
     display: flex;
     flex-direction: column;
-    /* border: 1px solid white; */
-    min-height: 458px;
     overflow: hidden;
     }
     
-    .reviews-container-title{
-        /* border: 1px solid red; */
-        height: 57px;
+.reviews-container-title{
+    height: 57px;
     }
-    .reviews-title {
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 24px;
-        color: #FAFAFA66;
+.reviews-title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FAFAFA66;
     }
-    .reviews-container-card {
-        /*min-height: 302px;*/
-        display:flex;
-        justify-content:left;
-        /* border: 1px solid blue; */
-        margin-left: 32px;
-        margin-right: 32px;
+.reviews-container-card {
+    display:flex;
+    justify-content:left;
     }
-    .reviews-container-card.swiper {
-        display: flex;
-        align-items: center;
-        margin-right: auto;
-        margin-left: 0;
-        flex: 1;
-        overflow: hidden;
+.reviews-container-card.swiper {
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+    margin-left: 0;
+    flex: 1;
+    overflow: hidden;
     }
-    .reviews-list {
-        width: 100%;
-        display:flex;
-        justify-content:left;
-        gap: 16px;
+.reviews-list {
+    display:flex;
+    justify-content:left;
+    gap: 16px;
     }
-    /* .swiper {
-        display: flex;
-        align-items: center;
-        max-width: 260px;
-        margin-right: auto;
-        margin-left: 0;
-        flex: 1;
-        overflow: hidden;
-    } */
-    .reviews-card {
-        display: flex;
-        flex-direction: column;
-        width: 332px;
-        border-radius: 20px;
-        border: 1px solid #FAFAFA66;
-        padding-top: 32px;
-        padding-left: 24px;
-        padding-right: 24px;
-        padding-bottom: 24px;
+.reviews-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 330px; 
+    min-height: 378px;
+    border-radius: 20px;
+    border: 1px solid #FAFAFA66;
+    padding-top: 32px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 24px;
     }
-    .reviews-card-avatar {
-        height: 48px;
-        width: 48px;
-        border-radius: 10px;
-        /* border: 2px solid green; */
+.reviews-card.swiper-slide{
+    width: 326px;
     }
-    .reviews-card-name {
-        margin-top: 40px;
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 30px;
-        color: #FAFAFA;
+.reviews-card-avatar {
+    height: 48px;
+    width: 48px;
+    border-radius: 10px;
     }
-    .reviews-card-description {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 24px;
-        color: #FAFAFA99;
-        margin-top: 10px;
+.reviews-card-name {
+    margin-top: 40px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FAFAFA;
     }
-    .reviews-buttons {
-        height: 99px;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        gap: 20px;
-        border: 1px blue;
+.reviews-card-description {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FAFAFA99;
+    margin-top: 10px;
     }
-    .reviews-button {
-        height: 68px;
-        width: 68px;
-        border-radius: 60px;
-        padding: 18px;
-        border: 1px solid  #FAFAFA99;
-        background-color: inherit;
+.reviews-buttons {
+    height: 99px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 20px;
+    border: 1px blue;
     }
-    .active {
-        border: 1px solid #FAFAFA;
-        fill: none;
-        stroke: #FAFAFA;
+.reviews-button {
+    height: 68px;
+    width: 68px;
+    border-radius: 60px;
+    padding: 18px;
+    border: 1px solid  #FAFAFA99;
+    background-color: inherit;
     }
-    .hidden-card {
-        display: none;
+.active {
+    border: 1px solid #FAFAFA;
+    fill: none;
+    stroke: #FAFAFA;
     }
-    .reviews-button-icon {
-        fill: none;
-        stroke: #FAFAFA99;
-    
+.hidden-card {
+    display: none;
     }
+.reviews-button-icon {
+    fill: none;
+    stroke: #FAFAFA99;
+    }
+.reviews-button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    pointer-events: none;
+    }
+    @media only screen and (max-width: 1440px){
+        .reviews-card {
+            max-width: 336px;
+            }
+        }
+    @media only screen and (max-width: 768px){
+        .reviews-card {
+            max-width: 328px;
+            }  
+        }  
