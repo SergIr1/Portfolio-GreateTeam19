@@ -24,7 +24,8 @@
 }
 
 .benefits-icon {
-    fill: #f4f4fd;
+    fill: none;
+    stroke: #f4f4fd;
 }
 
 .benefits-link {
@@ -64,8 +65,6 @@
     transition: background-color 0.3s;
     text-align: center;
 }
-
-.benefits-div {}
 
 .benefits-order-wrapper {
     margin-top: 50px;
