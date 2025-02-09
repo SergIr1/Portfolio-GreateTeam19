@@ -1,6 +1,6 @@
 import Accordion from "accordion-js";
 
-import Swiper from 'swiper';
+import Swiper from 'swiper/bundle';
 import { Navigation, Keyboard } from 'swiper/modules';
 
 import SimpleLightbox from "simplelightbox";
