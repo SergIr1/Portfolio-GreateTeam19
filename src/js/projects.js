@@ -1,21 +1,29 @@
 import { Swiper, Navigation, Keyboard } from './module-libs';
 
-document.addEventListener('DOMContentLoaded', function () {
-  const swiper = new Swiper('.swiper-container', {
+const initSwiper = () => {
+  const swiper = new Swiper('.ps-swiper.swiper', {
+    modules: [Navigation, Keyboard],
+    speed: 1200,
     loop: false,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.ps-btn-next.swiper-button-next',
+      prevEl: '.ps-btn-prev.swiper-button-prev',
     },
     keyboard: {
       enabled: true,
-      onlyInViewport: false,
+      onlyInViewport: true,
     },
+    slidesPerView: 1,
+    spaceBetween: 30,
+    grabCursor: true,
     on: {
       slideChange: function () {
-        const prevButton = document.querySelector('.swiper-button-prev');
-        const nextButton = document.querySelector('.swiper-button-next');
-
+        const prevButton = document.querySelector(
+          '.ps-btn-prev.swiper-button-prev'
+        );
+        const nextButton = document.querySelector(
+          '.ps-btn-next.swiper-button-next'
+        );
         if (swiper.isBeginning) {
           prevButton.classList.add('swiper-button-disabled');
           prevButton.setAttribute('disabled', true);
@@ -23,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function () {
           prevButton.classList.remove('swiper-button-disabled');
           prevButton.removeAttribute('disabled');
         }
-
         if (swiper.isEnd) {
           nextButton.classList.add('swiper-button-disabled');
           nextButton.setAttribute('disabled', true);
@@ -35,4 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   });
   swiper.emit('slideChange');
-});
+};
+
+document.addEventListener('DOMContentLoaded', initSwiper);
