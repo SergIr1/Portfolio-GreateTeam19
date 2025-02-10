@@ -10,6 +10,27 @@ const initAccordion = () => {
 
 // ============================================= swiper =============================================
 const swiperBtnEl = document.querySelector('.about-me-swiper-btn');
+const allSlides = document.querySelectorAll('.about-me-swiper-item.swiper-slide');
+
+const removeFirstSlideClass = () => {
+    const firstSlide = document.querySelector('.about-me-swiper-item.swiper-slide.active-slide-first');
+    if (firstSlide) {
+        firstSlide.classList.remove('active-slide-first');
+    }
+};
+
+
+const addSlideListeners = () => {
+    allSlides.forEach(slide => {
+        slide.addEventListener('click', removeFirstSlideClass);
+        slide.addEventListener('keydown', (event) => {
+            if (event.key === "ArrowLeft" || event.key === "ArrowRight" || event.key === "Tab") {
+                removeFirstSlideClass();
+            }
+        });
+        slide.addEventListener('touchstart', removeFirstSlideClass);
+    });
+};
 
     const updateActiveSlide = () => {
         document.querySelectorAll('.about-me-swiper-item.swiper-slide').forEach(slide => {
@@ -49,6 +70,7 @@ const initSwiper = () => {
 document.addEventListener("DOMContentLoaded", function () {
     initAccordion();
     initSwiper();
+    addSlideListeners();
     
     swiperBtnEl.addEventListener('click', () => {
     const firstSlide = document.querySelector('.about-me-swiper-item.swiper-slide');
