@@ -120,8 +120,9 @@
   margin-top: 32px;
 }
 
-.work-together-btn:hover {
-  background-color: #3cbc81;
+.work-together-btn:hover,
+.work-together-btn:focus {
+  background-color: #65760d;
 }
 
 .work-together-contact-info {
@@ -154,8 +155,12 @@
 }
 
 .work-together-contact-link:hover,
-.tel-link:hover {
-  background: #3cbc81;
+.work-together-contact-link:focus,
+.tel-link:hover,
+.tel-link:focus {
+  color: #c6e327;
+  border-color: #c6e327;
+  background-color: rgba(198, 227, 39, 0.1);
 }
 
 .modal-overlay {
