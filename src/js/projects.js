@@ -4,6 +4,7 @@ const initSwiper = () => {
   const swiper = new Swiper('.ps-swiper.swiper', {
     modules: [Navigation, Keyboard],
     speed: 1200,
+
     loop: false,
     navigation: {
       nextEl: '.ps-btn-next.swiper-button-next',
