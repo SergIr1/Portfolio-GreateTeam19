@@ -1,7 +1,9 @@
+import './module-libs.js';
 import './portfolio-api.js';
 import './render-functions.js';
 
 import './header.js';
+import './burger-menu.js';
 import './hero.js';
 import './about-me.js';
 import './benefits.js';
