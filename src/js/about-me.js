@@ -21,7 +21,6 @@ const swiperBtnEl = document.querySelector('.about-me-swiper-btn');
             activeSlide.classList.add('active-slide');
         }
 }
-updateActiveSlide();
     
 const initSwiper = () => {
     const swiper = new Swiper('.about-me-swiper-gen-wrap.swiper', {
