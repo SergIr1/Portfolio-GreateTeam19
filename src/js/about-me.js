@@ -19,6 +19,9 @@ const removeFirstSlideClass = () => {
     }
 };
 
+allSlides.forEach(slide => {
+    slide.setAttribute('tabindex', '0');
+});
 
 const addSlideListeners = () => {
     allSlides.forEach(slide => {
@@ -77,5 +80,5 @@ document.addEventListener("DOMContentLoaded", function () {
     if (firstSlide) {
         firstSlide.classList.remove('active-slide-first');
     }
-});
+    });
 });
