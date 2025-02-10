@@ -28,7 +28,7 @@
 .reviews-list {
     display:flex;
     justify-content:left;
-    gap: 16px;
+    gap: 16.5px;
     }
 .reviews-card {
     display: flex;

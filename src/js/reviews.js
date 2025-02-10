@@ -46,7 +46,7 @@ fetch('https://portfolio-js.b.goit.study/api/reviews')
         modules: [Navigation, Keyboard],
         speed: 400,
         slidesPerView: 1,
-        loop: false,
+        loop: true,
         navigation: {
            nextEl: '.reviews-button.swiper-button-next',
            prevEl: '.reviews-button.swiper-button-prev',
