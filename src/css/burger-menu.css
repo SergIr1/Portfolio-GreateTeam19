@@ -83,13 +83,14 @@
     letter-spacing: -0.02em;
     color: #fafafa;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-menu-nav-link:hover,
 .mobile-menu-nav-link:focus {
-    color: #3cbc81;
-    border-color: #3cbc81;
+    transform: scale(1.1);
+    color: #65760D;
+    border-color: #65760D;
 }
 
 .mobile-menu-order-button {
@@ -110,12 +111,13 @@
     margin-right: auto;
     text-align: center;
     border: none;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-menu-order-button:hover,
 .mobile-menu-order-button:focus {
-    background-color: #3cbc81;
+    transform: scale(1.1);
+    background-color: #65760D;
 }
 
 @media screen and (min-width: 768px) {
