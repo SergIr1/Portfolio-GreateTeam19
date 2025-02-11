@@ -1,7 +1,3 @@
-.projects.container {
-  margin-bottom: 64px;
-}
-
 .ps-title {
   font-weight: 600;
   font-size: 16px;
@@ -120,9 +116,6 @@
 /* MEDIA */
 
 @media screen and (min-width: 768px) {
-  .projects.container {
-    margin-bottom: 96px;
-  }
   .ps-swiper-wrapper.swiper-wrapper {
     margin-bottom: 64px;
   }
@@ -162,10 +155,6 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .projects.container {
-    margin-bottom: 164px;
-  }
-
   .ps-slide-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
