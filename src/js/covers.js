@@ -24,3 +24,5 @@ window.addEventListener('scroll', () => {
 document.querySelectorAll('.cover-list').forEach((list) => {
     list.style.animationPlayState = 'paused';
 });
+
+
