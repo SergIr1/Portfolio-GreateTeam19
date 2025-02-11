@@ -1,38 +1,28 @@
-body {
-    margin: 0;
-}
-
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-  .covers { 
-     margin: 0;
+.covers {
+    margin: 0;
     height: 100vh;
-    background-image: url('ellipse-03.png'); 
+    background-image: url('ellipse-03.png');
     background-position: center;
     background-repeat: repeat;
     background-size: cover;
 
-} 
-
-.container {
-    position: relative;
-  
 }
 
 .cover-pic {
     position: absolute;
     right: -800px;
     left: 0;
-    overflow: hidden;
     font-family: "Pridi", sans-serif;
     font-weight: 600;
     font-size: 20px;
     text-transform: uppercase;
-    
+
 }
 
 .cover-line {
@@ -46,7 +36,7 @@ body {
 }
 
 .cover-list {
-     display: flex;
+    display: flex;
     list-style: none;
     gap: 40px;
 }
@@ -55,15 +45,14 @@ body {
     background-color: rgb(217, 217, 217, 0.04);
     flex-shrink: 0;
     display: flex;
-    align-items: center;
     justify-content: center;
-    width: calc(100% / 8);
+    width: calc(100% / 4);
     white-space: nowrap;
     animation-name: marqueeLine;
-    animation-duration: 15s;
+    animation-duration: 10s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-  
+
 }
 
 .ellipse {
@@ -72,7 +61,7 @@ body {
     height: 350px;
     background: rgba(198, 227, 39, 1);
     filter: blur(50px);
-    z-index: 1;
+    z-index: 0;
 }
 
 .ellipse1 {
