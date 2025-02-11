@@ -11,25 +11,53 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-let lastScrollY = 0;
-window.addEventListener('scroll', function() {
-    let header = document.querySelector('.header');
-    let currentScrollY = window.scrollY;
-    
-    // Себе пометку - прокручиваем вниз и прокрутили больше, чем на 100px скрываем хедер
-    if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        header.classList.add('hidden');
-    } 
-    // Тут если прокручиу вверх показываем хедер
-    else if (currentScrollY < lastScrollY) {
-        header.classList.remove('hidden');
+document.addEventListener("DOMContentLoaded", () => {
+    const logoText = document.querySelector(".header-logo-text");
+    const menuButton = document.querySelector(".header-menu-button");
+    const header = document.querySelector(".header");
+    const projectsSection = document.querySelector(".projects");
+
+    let lastScrollY = window.scrollY;
+
+    // ==== Так це у нас базовий колір тексту ====
+    logoText.style.color = "#fafafa";
+    menuButton.style.color = "#fafafa";
+
+    function checkProjectsSection() {
+        if (!projectsSection) return;
+
+        const rect = projectsSection.getBoundingClientRect();
+        const isInViewport = rect.top < window.innerHeight && rect.bottom > 0; // Чи видно секцію?
+
+        if (isInViewport) {
+            logoText.style.color = "#65760D";
+            menuButton.style.color = "#65760D";
+            menuButton.style.borderColor = "#65760D";
+        } else {
+            logoText.style.color = "#fafafa";
+            menuButton.style.color = "#fafafa";
+            menuButton.style.borderColor = "#fafafa";
+        }
     }
-    // прокручую більше ніж 100px, роблю хедер непрозорим
-    if (currentScrollY = 100) {
-        header.classList.remove('transparent');
-    } else {
-        header.classList.add('transparent');
-    }
-    // Тут оновив позицію скролу)))
-    lastScrollY = currentScrollY;
+
+    window.addEventListener("scroll", function () {
+        let currentScrollY = window.scrollY;
+
+        // ==== Для себе ховаю хедер при скролі вниз :) ====
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+            header.classList.add("hidden");
+        }
+        // ==== Показую хедер при скролі вверх ====
+        else if (currentScrollY < lastScrollY) {
+            header.classList.remove("hidden");
+        }
+
+        checkProjectsSection();
+
+        lastScrollY = currentScrollY;
+    });
+
+    // ==== Перевіряємо секцію при завантаженні сторінки ====
+    checkProjectsSection();
 });
+
