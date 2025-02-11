@@ -1,48 +1,50 @@
 import { Swiper, Navigation, Keyboard } from './module-libs';
 
-const initSwiper = () => {
-  const swiper = new Swiper('.ps-swiper.swiper', {
-    modules: [Navigation, Keyboard],
-    speed: 1200,
-
+document.addEventListener('DOMContentLoaded', () => {
+  const swiper = new Swiper('.ps-swiper', {
+    direction: 'horizontal',
     loop: false,
+    speed: 1200,
     navigation: {
-      nextEl: '.ps-btn-next.swiper-button-next',
-      prevEl: '.ps-btn-prev.swiper-button-prev',
+      nextEl: '.ps-btn-next',
+      prevEl: '.ps-btn-prev',
+      disabledClass: 'swiper-button-disabled',
     },
+
     keyboard: {
       enabled: true,
-      onlyInViewport: true,
+      onlyInViewport: false,
     },
-    slidesPerView: 1,
+
+    a11y: {
+      prevSlideMessage: 'Previous slide',
+      nextSlideMessage: 'Next slide',
+    },
     spaceBetween: 30,
-    grabCursor: true,
     on: {
+      init: function () {
+        updateNavigationButtons(this);
+      },
       slideChange: function () {
-        const prevButton = document.querySelector(
-          '.ps-btn-prev.swiper-button-prev'
-        );
-        const nextButton = document.querySelector(
-          '.ps-btn-next.swiper-button-next'
-        );
-        if (swiper.isBeginning) {
-          prevButton.classList.add('swiper-button-disabled');
-          prevButton.setAttribute('disabled', true);
-        } else {
-          prevButton.classList.remove('swiper-button-disabled');
-          prevButton.removeAttribute('disabled');
-        }
-        if (swiper.isEnd) {
-          nextButton.classList.add('swiper-button-disabled');
-          nextButton.setAttribute('disabled', true);
-        } else {
-          nextButton.classList.remove('swiper-button-disabled');
-          nextButton.removeAttribute('disabled');
-        }
+        updateNavigationButtons(this);
       },
     },
   });
-  swiper.emit('slideChange');
-};
 
-document.addEventListener('DOMContentLoaded', initSwiper);
+  function updateNavigationButtons(swiperInstance) {
+    const prevButton = document.querySelector('.ps-btn-prev');
+    const nextButton = document.querySelector('.ps-btn-next');
+
+    if (swiperInstance.isBeginning) {
+      prevButton.classList.add('swiper-button-disabled');
+    } else {
+      prevButton.classList.remove('swiper-button-disabled');
+    }
+
+    if (swiperInstance.isEnd) {
+      nextButton.classList.add('swiper-button-disabled');
+    } else {
+      nextButton.classList.remove('swiper-button-disabled');
+    }
+  }
+});
