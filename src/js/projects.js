@@ -1,4 +1,4 @@
-import { Swiper, Navigation, Keyboard } from './module-libs';
+import { Swiper } from './module-libs';
 
 document.addEventListener('DOMContentLoaded', () => {
   const swiper = new Swiper('.ps-swiper', {
