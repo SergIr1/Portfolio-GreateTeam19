@@ -1,0 +1,130 @@
+/* .faq {
+    max-width: 375px;
+    margin: 0 auto;
+} */
+
+.faq-container {
+    margin: 0 16px;
+    margin-bottom: 64px;
+}
+
+.faq-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: self-start;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    color: rgba(250, 250, 250, 0.4);
+    margin-bottom: 32px;
+    text-align: left;
+}
+
+.faq .accordion-container .ac {
+    border-right: none;
+    border-left: none;
+    border-top: 1px solid rgba(250, 250, 250, 0.2);
+    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+    margin: 0;
+    padding: 20px 0;
+    background-color: transparent;
+}
+
+.faq .accordion-container .ac-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    color: var(--primary);
+}
+
+.faq .accordion-container>.ac .ac-text {
+    padding: 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    color: rgba(250, 250, 250, 0.6);
+}
+
+.faq .ac-header>.ac-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    min-width: 34px;
+    max-width: 34px;
+    height: 34px;
+}
+
+.faq .ac-header>.ac-trigger::after {
+    display: none;
+}
+
+.ac-svg {
+    width: 20px;
+    height: 20px;
+    transition: 0.3s;
+    fill: none;
+    stroke: #fafafa;
+}
+
+.faq .active {
+    transform: rotate(180deg);
+    border: none;
+    fill: none;
+    stroke: #fafafa;
+}
+
+@media only screen and (min-width: 768px) {
+    /* .faq {
+        max-width: 768px;
+    } */
+
+    .faq-container {
+        margin: 0 32px;
+        margin-bottom: 96px;
+    }
+
+    .faq .accordion-container .ac-header {
+        margin-bottom: 26px;
+    }
+
+    .faq .accordion-container .ac-panel {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    /* .faq {
+        max-width: 1440px;
+    } */
+
+    .faq-container {
+        margin-bottom: 164px;
+    }
+
+    .faq .accordion-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .faq .accordion-container .ac {
+        width: 50%;
+    }
+
+    .faq .accordion-container .ac:nth-child(odd) {
+        padding-right: 22px;
+        border-right: 1px solid rgba(250, 250, 250, 0.2);
+    }
+
+    .faq .accordion-container .ac:nth-child(even) {
+        padding-left: 22px;
+    }
+}
