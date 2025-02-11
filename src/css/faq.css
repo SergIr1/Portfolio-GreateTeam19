@@ -3,10 +3,10 @@
     margin: 0 auto;
 } */
 
-.faq-container {
+/* .faq-container {
     margin: 0 16px;
     margin-bottom: 64px;
-}
+} */
 
 .faq-title {
     display: flex;
@@ -87,10 +87,10 @@
         max-width: 768px;
     } */
 
-    .faq-container {
+    /* .faq-container {
         margin: 0 32px;
         margin-bottom: 96px;
-    }
+    } */
 
     .faq .accordion-container .ac-header {
         margin-bottom: 26px;
@@ -106,9 +106,9 @@
         max-width: 1440px;
     } */
 
-    .faq-container {
+    /* .faq-container {
         margin-bottom: 164px;
-    }
+    } */
 
     .faq .accordion-container {
         display: flex;

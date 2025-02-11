@@ -43,6 +43,8 @@
 
 .header-close-button {
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin-left: auto;
     border: none;
     background-color: transparent;
@@ -76,6 +78,7 @@
 }
 
 .header-navigation-list.active {
+    border:none;
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
@@ -137,12 +140,9 @@ html {
         display: none;
     }
 
-    .header-navigation-link:hover {
-        background-color: #3cbc81;
-    }
-
+    .header-navigation-link:hover,
     .header-navigation-link:focus {
-        background-color: #3cbc81;
+        background-color: #65760D;
     }
 
     .header-close-button-svg {
@@ -155,16 +155,20 @@ html {
         border: none;
         border-bottom: 2px solid #fafafa;
 
-        padding-top: 10px;
-        padding-left: 0px;
-        padding-right: 0px;
+        padding: 0;
 
         font-weight: 500;
         font-size: 16px;
         letter-spacing: -0.02em;
 
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
         background-color: transparent;
         color: #fafafa;
+    }
+
+    .header-menu-button:hover,
+    .header-menu-button:focus {
+        transform: scale(1.5);
     }
 
     .header-order-button {
@@ -186,14 +190,12 @@ html {
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .header-order-button:hover {
-        background-color: #3cbc81;
-    }
-
+    .header-order-button:hover,
     .header-order-button:focus {
-        background-color: #3cbc81;
+        transform: scale(1.1);
+        background-color: #65760D;
     }
 }
