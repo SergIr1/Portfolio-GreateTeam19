@@ -2,6 +2,22 @@
 @import "simplelightbox/dist/simple-lightbox.min.css";
 @import 'swiper/css';
 
+@font-face {
+  font-family: 'Inter Tight';
+  src: url('../fonts/InterTight-Medium.woff2') format('woff2'),
+    url('../fonts/InterTight-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter Tight';
+  src: url('../fonts/InterTight-SemiBold.woff2') format('woff2'),
+    url('../fonts/InterTight-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
 body {
   font-family: "Inter Tight", serif;
   color: #fafafa;
