@@ -168,6 +168,22 @@
   background-color: rgba(198, 227, 39, 0.1);
 }
 
+.work-together-btn,
+.work-together-contact-link,
+.tel-link {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.work-together-contact-link,
+.tel-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.hovered {
+  transform: translateY(-3px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -243,8 +259,8 @@
     background-image: url(../img/footer/tablet-elements.jpg);
   }
 
-  .work-together-container-wrap{
-padding-left: 32px;
+  .work-together-container-wrap {
+    padding-left: 32px;
   }
 
   /* .container {
@@ -312,9 +328,9 @@ padding-left: 32px;
     background-image: url(../img/footer/desktop-elements.webp);
   }
 
-    .work-together-container-wrap{
-      padding-left: 196px;
-    }
+  .work-together-container-wrap {
+    padding-left: 196px;
+  }
 
   /* .container {
     padding-left: 196px;
@@ -329,3 +345,5 @@ padding-left: 32px;
     margin-left: 54px;
   }
 }
+
+
