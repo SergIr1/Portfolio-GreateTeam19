@@ -17,12 +17,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const emailPattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
     if (!emailPattern.test(email)) {
-      alert('Please enter a valid email address.');
+      iziToast.error({
+        title: 'Error',
+        message: 'Please enter a valid email address.',
+      });
       return;
     }
 
     if (!email || !comment) {
-      alert('Please fill in all fields.');
+      iziToast.warning({
+        title: 'Warning',
+        message: 'Please fill in all fields.',
+      });
       return;
     }
 
@@ -38,14 +44,20 @@ document.addEventListener('DOMContentLoaded', () => {
         commentInput.value = '';
         modal.classList.add('modal-active');
       } else {
-        alert('An error occurred. Please check your details and try again.');
+        iziToast.error({
+          title: 'Error',
+          message:
+            'An error occurred. Please check your details and try again.',
+        });
       }
     } catch (error) {
-      alert('Server error. Please try again later.');
+      iziToast.error({
+        title: 'Server Error',
+        message: 'Please try again later.',
+      });
     }
   });
 
-  // Close modal window
   closeModalBtn.addEventListener('click', () => {
     modal.classList.remove('modal-active');
   });
@@ -69,5 +81,28 @@ document.addEventListener('DOMContentLoaded', () => {
       commentInput.value =
         commentInput.value.substring(0, maxCommentLength) + '...';
     }
+  });
+
+  const formButtons = document.querySelectorAll('.work-together-btn');
+  const formLinks = document.querySelectorAll(
+    '.work-together-contact-link, .tel-link'
+  );
+
+  [...formButtons, ...formLinks].forEach(element => {
+    element.addEventListener('mouseenter', () => {
+      element.classList.add('hovered');
+    });
+
+    element.addEventListener('mouseleave', () => {
+      element.classList.remove('hovered');
+    });
+
+    element.addEventListener('focus', () => {
+      element.classList.add('hovered');
+    });
+
+    element.addEventListener('blur', () => {
+      element.classList.remove('hovered');
+    });
   });
 });
