@@ -63,7 +63,7 @@
     padding: 18px 36px;
     min-width: 187px;
     height: 55px;
-    transition: background-color 250ms linear, border-color 250ms linear;
+    transition: background-color 250ms linear, border-color 250ms linear, transform 250ms linear;
     text-align: center;
 }
 
@@ -71,7 +71,9 @@
     margin-top: 32px;
 }
 
-.benefits-order:hover {
+.benefits-order:hover,
+.benefits-order:focus {
+    transform: scale(1.1);
     border-color: #C6E327;
     background-color: #65760D;
 }
