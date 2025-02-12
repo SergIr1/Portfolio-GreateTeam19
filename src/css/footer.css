@@ -123,10 +123,13 @@
   align-items: center;
   justify-content: center;
   margin-top: 32px;
+
+  transition: background-color 250ms linear, transform 250ms linear;
 }
 
 .work-together-btn:hover,
 .work-together-btn:focus {
+  transform: scale(1.1);
   background-color: #65760d;
 }
 
@@ -157,6 +160,8 @@
   justify-content: center;
   text-align: center;
   white-space: nowrap;
+
+  transition: background-color 250ms linear, border-color 250ms linear, color 250ms linear;
 }
 
 .work-together-contact-link:hover,
