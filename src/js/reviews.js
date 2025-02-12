@@ -1,4 +1,4 @@
-import { Swiper, Navigation, Keyboard, iziToast } from './module-libs';
+import { Swiper, iziToast } from './module-libs';
 
 const reviewList = document.querySelector('.reviews-list');
 const btnContainer= document.querySelector('.reviews-buttons');
@@ -45,7 +45,7 @@ const initSwiperReviews = () => {
     const slides = document.querySelectorAll('.reviews-card.swiper-slide');
     
     const swiper = new Swiper('.reviews-container-card.swiper', {
-        modules: [Navigation, Keyboard],
+        // modules: [Navigation, Keyboard],
         speed: 400,
         slidesPerView: 1,
         loop: slides.length > 3,

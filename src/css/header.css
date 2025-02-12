@@ -29,6 +29,10 @@
     display: flex;
 }
 
+.header-logo-link{
+    display: flex;
+}
+
 .header-logo-text {
     align-self: self-start;
 }

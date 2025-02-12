@@ -2,41 +2,55 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.querySelector(".js-header-menu-toggle");
     const nav = document.querySelector(".js-header-navigation-list");
     const navLinks = document.querySelectorAll(".js-header-navigation-link");
-    menuToggle.addEventListener("click", () => {
+
+    menuToggle.addEventListener("click", (event) => {
+            // ==== Так це я прибераю спрацьовуванню події на document ====
+        event.stopPropagation(); 
         nav.classList.toggle("active");
     });
+
+    // ==== Тут закриваємо меню при кліку на посилання ==== 
     navLinks.forEach(link => {
         link.addEventListener("click", () => {
             nav.classList.remove("active");
         });
     });
+
+    // ==== Закриваємо меню при кліку будь-де на сторінці, крім самого меню і кнопки ====
+    document.addEventListener("click", (event) => {
+        if (!nav.contains(event.target) && !menuToggle.contains(event.target)) {
+            nav.classList.remove("active");
+        }
+    });
 });
 document.addEventListener("DOMContentLoaded", () => {
-    const logoText = document.querySelector(".header-logo-text");
-    const menuButton = document.querySelector(".header-menu-button");
+    // const logoText = document.querySelector(".header-logo-text");
+    // const menuButton = document.querySelector(".header-menu-button");
     const header = document.querySelector(".header");
-    const projectsSection = document.querySelector(".projects");
+    const aboutMeSection = document.querySelector(".js-about-me");
 
     let lastScrollY = window.scrollY;
 
     // ==== Так це у нас базовий колір тексту ====
-    logoText.style.color = "#fafafa";
-    menuButton.style.color = "#fafafa";
+    // logoText.style.color = "#fafafa";
+    // menuButton.style.color = "#fafafa";
 
     function checkProjectsSection() {
-        if (!projectsSection) return;
+        if (!aboutMeSection) return;
 
-        const rect = projectsSection.getBoundingClientRect();
-        const isInViewport = rect.top < window.innerHeight && rect.bottom > 0; // Чи видно секцію?
+        const rect = aboutMeSection.getBoundingClientRect();
+        const isInViewport = rect.top < window.innerHeight;
 
         if (isInViewport) {
-            logoText.style.color = "#65760D";
-            menuButton.style.color = "#65760D";
-            menuButton.style.borderColor = "#65760D";
+            header.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
+            // logoText.style.color = "#65760D";
+            // menuButton.style.color = "#65760D";
+            // menuButton.style.borderColor = "#65760D";
         } else {
-            logoText.style.color = "#fafafa";
-            menuButton.style.color = "#fafafa";
-            menuButton.style.borderColor = "#fafafa";
+            header.style.backgroundColor = 'transparent';
+            // logoText.style.color = "#fafafa";
+            // menuButton.style.color = "#fafafa";
+            // menuButton.style.borderColor = "#fafafa";
         }
     }
 
