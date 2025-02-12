@@ -1,12 +1,15 @@
 .about-me-wraperr {
     margin-bottom: 32px;
+    height: 100%;
 }
 
 .about-me-wraperr-text {
     height: 100%;
-    min-height: 272px;
+    min-height: 500px;
     margin-bottom: 16px;
     padding: 32px 32px 0px 32px;
+    border-radius: 24px;
+    background-color: #242527;
 }
 
 .about-me-text {
@@ -25,7 +28,7 @@
 }
 
 .about-me-wraperr-text{
-    min-height: 436px;
+    min-height: 700px;
     padding: 64px 64px 0px 64px;
 }
 
@@ -57,6 +60,7 @@
 }
 
 .about-me-img {
+    height: 100%;
     border-radius: 24px;
 }
 
