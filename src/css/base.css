@@ -6,7 +6,6 @@
   font-family: 'Inter Tight';
   src: url('../fonts/InterTight-Medium.woff2') format('woff2'),
     url('../fonts/InterTight-Medium.woff') format('woff');
-    font-display: swap;
   font-weight: 500;
   font-style: normal;
 }
@@ -15,7 +14,6 @@
   font-family: 'Inter Tight';
   src: url('../fonts/InterTight-SemiBold.woff2') format('woff2'),
     url('../fonts/InterTight-SemiBold.woff') format('woff');
-    font-display: swap;
   font-weight: 600;
   font-style: normal;
 }
