@@ -2,12 +2,12 @@
     <div class="container header-container">
         <nav class="header-navigation">
             <div class="header-logo-wrap">
-                <a href="/index.html" class="header-logo-link">
+                <a href="./index.html" class="header-logo-link">
                     <img class="header-logo" src="/img/logo.webp" alt="logo">
                     <p class="header-logo-text">jefferson*</p>
                 </a>
             </div>
-            <button class="header-menu-button js-header-menu-toggle" type="button">Menu</button>
+            <button class="header-menu-button js-header-menu-toggle" type="button" aria-label="menu">Menu</button>
             <ul class="header-navigation-list js-header-navigation-list">
                 <li class="header-navigation-item">
                     <a class="header-navigation-link js-header-navigation-link" href="#aboutMe">About me</a>
@@ -24,8 +24,8 @@
             </ul>
             <a class="header-order-button" href="#work-together">Order the project</a>
         </nav>
-        <button class="header-close-button" data-menu-burger-open>
-            <svg class="header-close-button-svg">
+        <button class="header-close-button" aria-label="open menu" data-menu-burger-open>
+            <svg class="header-close-button-svg" aria-hidden="true">
                 <use href="/img/sprite.svg#icon-Icon" />
             </svg>
         </button>

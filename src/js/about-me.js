@@ -1,4 +1,4 @@
-import { Accordion, Swiper, Navigation, Keyboard } from './module-libs';
+import { Accordion, Swiper, Navigation, Keyboard } from './module-libs.js';
 
 const initAccordion = () => {
     const acordionFirstItem = new Accordion(".about-me-accordion-list.accordion-container", {
