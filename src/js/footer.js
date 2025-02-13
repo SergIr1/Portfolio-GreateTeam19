@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ====== Проверяем пустой email ДО проверки по RegExp ====== 
     if (!email) {
       iziToast.error({
-                message: 'Sorry, there are no images matching your search query. Please try again!',
+                message: 'Please enter a valid email address.',
                 timeout: 3500,
                 position: "topRight",
                 maxWidth: 432,
