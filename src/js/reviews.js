@@ -7,7 +7,7 @@ const btnContainer= document.querySelector('.reviews-buttons');
 const renderReviews = info =>{
     return `
     <li class="reviews-card swiper-slide">
-                <img class="reviews-card-avatar" src="${info.avatar_url}"></img>
+                <img class="reviews-card-avatar" alt="${info.author}" src="${info.avatar_url}"></img>
                 <h4 class="reviews-card-name">${info.author}</h4>
                 <p class="reviews-card-description">${info.review}</p>
             </li>
