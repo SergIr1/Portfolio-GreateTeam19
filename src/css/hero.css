@@ -23,12 +23,12 @@
 
 }
 
-@media (-webkit-min-device-pixel-ratio: 2),
+/* @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
     .hero {
         background-image: url("../img/hero/hero@2x.webp");
     }
-}
+} */
 
 .hero-tittle {
 
