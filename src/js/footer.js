@@ -7,6 +7,33 @@ document.addEventListener('DOMContentLoaded', () => {
   const commentInput = document.getElementById('user-comment');
   const modal = document.getElementById('modal');
   const closeModalBtn = document.getElementById('modal-close');
+  // const message = document.createElement("div");
+
+  const messageDiv = document.querySelector('.work-together-email-message');
+
+  // emailInput.parentNode.appendChild(message);
+
+    emailInput.addEventListener("input", () => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (emailPattern.test(emailInput.value)) {
+      emailInput.classList.add("valid");
+      emailInput.classList.remove("invalid");
+      messageDiv.textContent = "Success!";
+      messageDiv.className = "success-message";
+      messageDiv.style.display = "block";
+    } else {
+      emailInput.classList.add("invalid");
+      emailInput.classList.remove("valid");
+      messageDiv.textContent = "Invalid email, try again";
+      messageDiv.className = "error-message";
+      messageDiv.style.display = "block";
+    }
+
+    if (emailInput.value === "") {
+      messageDiv.style.display = "none";
+    }
+  });
 
   if (!form || !emailInput || !commentInput || !modal || !closeModalBtn) {
     return;

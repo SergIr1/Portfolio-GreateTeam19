@@ -10,8 +10,11 @@
 
         <div class="work-together-form-container">
             <form class="work-together-contact-form">
-                <input class="work-together-form-input" id="email" name="email" type="email"
-                    placeholder="clients@gmail.com" pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" required />
+                <div class="work-together-input-wrap">
+                    <input class="work-together-form-input" id="email" name="email" type="email"
+                        placeholder="clients@gmail.com" pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" required />
+                    <div class="work-together-email-message"></div>
+                </div>
                 <textarea class="work-together-form-input textarea-input" id="user-comment" name="user-comment"
                     placeholder="comments" required></textarea>
                 <button class="work-together-btn" type="submit">Send</button>

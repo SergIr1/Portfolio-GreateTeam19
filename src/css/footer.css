@@ -63,16 +63,28 @@
   gap: 16px;
 }
 
+        .work-together-input-wrap {
+          max-width: 350px;
+          width: 100%;
+          max-height: 44px;
+          height: 100%;
+        }
+
 .work-together-form-input,
 .textarea-input {
+  /* align-self: baseline; */
   width: 100%;
   max-width: 350px;
   padding: 10px;
   font-size: 16px;
   border: none;
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
-  background: transparent;
-  color: white;
+  background-color: transparent;
+  color: #fafafa;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
   outline: none;
   font-family: 'Inter Tight', sans-serif;
   height: 44px;
@@ -92,8 +104,7 @@
   font-size: 16px;
   border: none;
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
-  background: transparent;
-  color: white;
+  background-color: transparent;
   outline: none;
   font-family: 'Inter Tight', sans-serif;
   white-space: nowrap;
@@ -102,10 +113,78 @@
   resize: none;
 }
 
+.work-together-form-input:focus{
+  border-color: #fafafa;
+}
+
+.work-together-form-input.valid {
+  border-color: #3cbc81;
+}
+
+.work-together-form-input.invalid {
+  border-color: #e74a3b;
+}
+
+.work-together-form-input.invalid:hover{
+  border-color: rgba(250, 250, 250, 0.2);
+}
+
+.work-together-form-input.invalid:focus{
+border-color: #e74a3b;
+}
+
+.success-message {
+  display: none;
+  margin-top: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: #3cbc81;
+}
+
+.error-message {
+  display: none;
+  margin-top: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: #e74a3b;
+}
+
+.work-together-email-message{
+    display: none;
+    margin-top: 80px;
+    font-size: 14px;
+    color: #fafafa;
+}
+
+.work-together-email-message.success-message {
+  color: #3cbc81;
+}
+
+.work-together-email-message.error-message {
+  color: red;
+}
+
+/* .work-together-input-wrap{
+  align-self: center
+
+} */
+
 .work-together-form-input::placeholder,
 .textarea-input::placeholder {
-  color: rgba(250, 250, 250, 0.2);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgba(250, 250, 250, 0.6);
 }
+
+/* .work-together-form-input:focus::placeholder,
+.textarea-input:hover::placeholder {
+  color: rgba(250, 250, 250, 0.6);
+} */
 
 .work-together-btn {
   width: 100px;
@@ -294,6 +373,11 @@
     align-items: center;
   }
 
+    .work-together-input-wrap {
+      max-width: 245px;
+      width: 100%;
+    }
+
   .work-together-form-input,
   .textarea-input {
     max-width: 245px;
@@ -340,6 +424,11 @@
   /* .container {
     padding-left: 196px;
   } */
+
+  .work-together-input-wrap {
+    max-width: 390px;
+    width: 100%;
+  }
 
   .work-together-form-input,
   .textarea-input {
