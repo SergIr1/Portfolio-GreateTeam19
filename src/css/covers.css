@@ -17,7 +17,7 @@
 .covers-container{
     position: relative;
         margin: 0;
-        min-height: 100vh;
+        /* min-height: 100vh; */
         overflow: hidden;
         height: 100%;
         max-height: 508px;
@@ -96,6 +96,7 @@
 }
 
 .covers-ellipse-second {
+    /* display: none; */
     top: 0;
     left: 50%;
     transform: translateX(-75%);
@@ -113,6 +114,7 @@
     } */
 
     .covers-ellipse-second {
+        display: block;
         top: 0;
         transform: translateX(-100%);
     }
