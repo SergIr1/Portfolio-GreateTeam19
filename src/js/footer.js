@@ -114,7 +114,10 @@ document.addEventListener('DOMContentLoaded', () => {
       if (response.ok) {
         emailInput.value = '';
         commentInput.value = '';
+        emailInput.classList.remove("valid");
+
         modal.classList.add('modal-active');
+        document.body.classList.add('modal-open');
 
         iziToast.success({
             message: 'Application sent!',
@@ -162,17 +165,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   closeModalBtn.addEventListener('click', () => {
     modal.classList.remove('modal-active');
+    document.body.classList.remove('modal-open');
   });
 
   modal.addEventListener('click', (event) => {
     if (event.target === modal) {
       modal.classList.remove('modal-active');
+      document.body.classList.remove('modal-open');
     }
   });
 
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
       modal.classList.remove('modal-active');
+      document.body.classList.remove('modal-open');
     }
   });
 

@@ -79,6 +79,7 @@
   font-size: 16px;
   border: none;
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  border-color: rgba(250, 250, 250, 0.2);
   background-color: transparent;
   color: #fafafa;
   font-weight: 500;
@@ -104,6 +105,7 @@
   font-size: 16px;
   border: none;
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  border-color: rgba(250, 250, 250, 0.2);
   background-color: transparent;
   outline: none;
   font-family: 'Inter Tight', sans-serif;
@@ -125,13 +127,15 @@
   border-color: #e74a3b;
 }
 
-.work-together-form-input.invalid:hover{
-  border-color: rgba(250, 250, 250, 0.2);
+.work-together-form-input.invalid:hover,
+.textarea-input:hover {
+  border-color: #fafafa;
 }
 
 .work-together-form-input.invalid:focus{
 border-color: #e74a3b;
 }
+
 
 .success-message {
   display: none;
@@ -141,6 +145,7 @@ border-color: #e74a3b;
   line-height: 1.29;
   letter-spacing: -0.02em;
   color: #3cbc81;
+  border-color: #3cbc81;
 }
 
 .error-message {
@@ -151,6 +156,7 @@ border-color: #e74a3b;
   line-height: 1.29;
   letter-spacing: -0.02em;
   color: #e74a3b;
+  border-color: #e74a3b;
 }
 
 .work-together-email-message{
@@ -287,6 +293,11 @@ border-color: #e74a3b;
 .modal-active {
   opacity: 1;
   visibility: visible;
+}
+
+.modal-open {
+  overflow: hidden;
+  height: 100vh;
 }
 
 .modal-content {
