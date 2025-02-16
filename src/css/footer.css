@@ -127,7 +127,7 @@
   border-color: #e74a3b;
 }
 
-.work-together-form-input.invalid:hover,
+
 .textarea-input:hover {
   border-color: #fafafa;
 }
@@ -161,7 +161,7 @@ border-color: #e74a3b;
 
 .work-together-email-message{
     display: none;
-    margin-top: 80px;
+    margin-top: 4px;
     font-size: 14px;
     color: #fafafa;
 }

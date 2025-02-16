@@ -7,11 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const commentInput = document.getElementById('user-comment');
   const modal = document.getElementById('modal');
   const closeModalBtn = document.getElementById('modal-close');
-  // const message = document.createElement("div");
+  const btnElForm = document.querySelector('.work-together-btn')
 
   const messageDiv = document.querySelector('.work-together-email-message');
-
-  // emailInput.parentNode.appendChild(message);
 
     emailInput.addEventListener("input", () => {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -26,14 +24,15 @@ document.addEventListener('DOMContentLoaded', () => {
       emailInput.classList.add("invalid");
       emailInput.classList.remove("valid");
       messageDiv.textContent = "Invalid email, try again";
-      messageDiv.className = "error-message";
+      messageDiv.classList.add("error-message");
       messageDiv.style.display = "block";
     }
 
-    if (emailInput.value === "") {
+      if (emailInput.value === "") {
+      emailInput.style.borderColor = "rgba(250, 250, 250, 0.2)";
       messageDiv.style.display = "none";
     }
-  });
+    });
 
   if (!form || !emailInput || !commentInput || !modal || !closeModalBtn) {
     return;
@@ -41,7 +40,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ====== pattern был строкой, теперь создаём RegExp ====== 
   const pattern = new RegExp(emailInput.getAttribute('pattern'));
-
+          btnElForm.addEventListener('click', () => {
+            messageDiv.textContent = '';
+            messageDiv.classList.remove("error-message");
+            messageDiv.style.display = "none";
+            emailInput.classList.remove("invalid");
+          })
+  
   // ====== Отключаем встроенную валидацию браузера ======
   form.setAttribute("novalidate", "true");
 
@@ -115,6 +120,15 @@ document.addEventListener('DOMContentLoaded', () => {
         emailInput.value = '';
         commentInput.value = '';
         emailInput.classList.remove("valid");
+        messageDiv.textContent = '';
+        messageDiv.classList.remove("success-message");
+        messageDiv.style.display = "none";
+
+        // if (messageDiv.classList.contains("error-message")) {
+        //   messageDiv.textContent = '';
+        //   messageDiv.classList.remove("error-message");
+        //   messageDiv.style.display = "none";
+        // }
 
         modal.classList.add('modal-active');
         document.body.classList.add('modal-open');
