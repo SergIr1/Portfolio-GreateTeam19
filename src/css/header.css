@@ -34,6 +34,7 @@
 }
 
 .header-logo-text {
+    color: #fafafa;
     align-self: self-start;
 }
 
@@ -69,11 +70,12 @@
 .header-navigation-list {
     position: absolute;
     top: 100%;
-    left: 50%;
+    left: 46%;
     transform: translateX(-50%);
-    width: 67px;
-    height: 138px;
-    background-color: transparent;
+    width: 115px;
+    height: 192px;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.4);
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transform: translateY(-100%);
     opacity: 0;
@@ -100,6 +102,10 @@ html {
     .header-logo-wrap {
         margin-right: auto;
     }
+
+        .header-navigation-list{
+            left: 42%;
+        }
 
     .header-navigation {
         display: flex;
@@ -202,4 +208,10 @@ html {
         transform: scale(1.1);
         background-color: #65760D;
     }
+}
+
+@media only screen and (min-width: 1440px){
+        .header-navigation-list {
+                left: 46%;
+            }
 }

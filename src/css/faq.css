@@ -1,13 +1,3 @@
-/* .faq {
-    max-width: 375px;
-    margin: 0 auto;
-} */
-
-/* .faq-container {
-    margin: 0 16px;
-    margin-bottom: 64px;
-} */
-
 .faq-title {
     display: flex;
     justify-content: flex-start;
@@ -16,7 +6,7 @@
     font-size: 16px;
     line-height: 150%;
     letter-spacing: -0.02em;
-    color: rgba(250, 250, 250, 0.4);
+    color: var(--shadow-text-color);
     margin-bottom: 32px;
     text-align: left;
 }
@@ -24,8 +14,8 @@
 .faq .accordion-container .ac {
     border-right: none;
     border-left: none;
-    border-top: 1px solid rgba(250, 250, 250, 0.2);
-    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+    border-top: 1px solid var(--border-color-link);
+    border-bottom: 1px solid var(--border-color-link);
     margin: 0;
     padding: 20px 0;
     background-color: transparent;
@@ -48,7 +38,7 @@
     font-size: 16px;
     line-height: 150%;
     letter-spacing: -0.02em;
-    color: rgba(250, 250, 250, 0.6);
+    color: var(--acord-title-text);
 }
 
 .faq .ac-header>.ac-trigger {
@@ -57,7 +47,7 @@
     justify-content: center;
     padding: 0;
     border-radius: 50%;
-    border: 1px solid rgba(250, 250, 250, 0.2);
+    border: 1px solid var(--border-color-link);
     min-width: 34px;
     max-width: 34px;
     height: 34px;
@@ -72,26 +62,18 @@
     height: 20px;
     transition: 0.3s;
     fill: none;
-    stroke: #fafafa;
+    stroke: var(--text-color);
+    transition: stroke 1000ms linear;
 }
 
 .faq .active {
     transform: rotate(180deg);
     border: none;
     fill: none;
-    stroke: #fafafa;
+    stroke: var(--text-color);
 }
 
 @media only screen and (min-width: 768px) {
-    /* .faq {
-        max-width: 768px;
-    } */
-
-    /* .faq-container {
-        margin: 0 32px;
-        margin-bottom: 96px;
-    } */
-
     .faq .accordion-container .ac-header {
         margin-bottom: 26px;
     }
@@ -101,14 +83,7 @@
     }
 }
 
-@media only screen and (min-width: 1200px) {
-    /* .faq {
-        max-width: 1440px;
-    } */
-
-    /* .faq-container {
-        margin-bottom: 164px;
-    } */
+@media only screen and (min-width: 1440px) {
 
     .faq .accordion-container {
         display: flex;
@@ -121,7 +96,7 @@
 
     .faq .accordion-container .ac:nth-child(odd) {
         padding-right: 22px;
-        border-right: 1px solid rgba(250, 250, 250, 0.2);
+        border-right: 1px solid var(--border-color-link);
     }
 
     .faq .accordion-container .ac:nth-child(even) {

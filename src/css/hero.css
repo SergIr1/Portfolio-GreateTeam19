@@ -23,6 +23,36 @@
 
 }
 
+.hero-team-btn {
+    position: fixed;
+    top: auto;
+    bottom: 20px;
+    right: auto;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    background-color: var(--text-color);
+    transition: background-color 250ms linear;
+    z-index: 1000;
+
+}
+
+.hero-team-btn-icon{
+    fill: none;
+    stroke: var(--background-color);
+    transition: fill 250ms linear, stroke 250ms linear;
+}
+
+.hero-team-btn-icon:hover,
+.hero-team-btn-icon:focus{
+    fill: #65760d;
+    stroke: #65760d;
+}
+
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
     .hero {
@@ -71,6 +101,7 @@
     max-width: 343px;
     margin-top: 281px;
     margin-bottom: 212px;
+    color: #fafafa;
 
 
 }
@@ -85,6 +116,12 @@
     gap: 4px;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+@media screen and (min-width: 375px){
+.hero-links-wrapper{
+    flex-wrap: nowrap;
+}
 }
 
 .hero-list-links {
@@ -102,6 +139,7 @@
 .hero-sm-link {
     width: 37px;
     height: 37px;
+    padding: 18px 20px;
     border-radius: 60px;
     display: flex;
     align-items: center;
@@ -110,6 +148,7 @@
     font-size: 14px;
     letter-spacing: -0.02em;
     transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+    color: #fafafa;
 }
 
 .hero-email {
@@ -128,7 +167,7 @@
     font-size: 14px;
     font-style: normal;
     transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
-
+    color: #fafafa;
 }
 
 .hero-sm-link:hover,

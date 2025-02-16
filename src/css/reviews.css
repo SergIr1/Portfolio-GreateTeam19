@@ -11,7 +11,7 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
-    color: #FAFAFA66;
+    color: var(--shadow-text-color);
     }
 .reviews-container-card {
     display:flex;
@@ -36,12 +36,21 @@
     max-width: 330px; 
     min-height: 378px;
     border-radius: 20px;
-    border: 1px solid #FAFAFA66;
+    border: 1px solid var(--acord-title-text);
     padding-top: 32px;
     padding-left: 24px;
     padding-right: 24px;
     padding-bottom: 24px;
+    transition: transform 250ms linear;
     }
+
+.reviews-card:hover,
+.reviews-card:focus{
+    border-color: var(--text-color);
+    transform: scale(0.95);
+    }
+
+
 .reviews-card.swiper-slide{
     width: 326px;
     }
@@ -55,13 +64,13 @@
     font-weight: 600;
     font-size: 20px;
     line-height: 30px;
-    color: #FAFAFA;
+    color: var(--text-color);
     }
 .reviews-card-description {
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    color: #FAFAFA99;
+    color: var(--color-text-menu);
     margin-top: 10px;
     }
 .reviews-buttons {
@@ -70,14 +79,14 @@
     align-items: flex-end;
     justify-content: center;
     gap: 20px;
-    border: 1px blue;
+    /* border: 1px blue; */
     }
 .reviews-button {
     height: 68px;
     width: 68px;
     border-radius: 60px;
     padding: 18px;
-    border: 1px solid  #FAFAFA99;
+    border: 1px solid var(--color-text-menu);
     background-color: inherit;
     }
 .active {
@@ -90,7 +99,7 @@
     }
 .reviews-button-icon {
     fill: none;
-    stroke: #FAFAFA99;
+    stroke: var(--color-text-menu);
     }
 .reviews-button:disabled {
     opacity: 0.35;
