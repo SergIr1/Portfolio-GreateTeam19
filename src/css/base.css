@@ -45,7 +45,7 @@ body {
   margin: 0;
 }
 
-body.darkstyle {
+.darkstyle {
   --accent-title-color: #1c1d20;
   --border-color-link:#797979;
   --background-color: #d4d4d4;
