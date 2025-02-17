@@ -3,7 +3,16 @@
             width="32" height="32" aria-hidden="true">
             <use href="/img/light-up.svg#icon-light-up"></use>
         </svg></button>
-    <img class="hero-img" src="/img/hero/hero-bg.webp" alt="photo about me" width="1440" height="900">
+
+    <source srcset="/img/hero/hero-bg.webp" media="(min-width:
+                            1440px)" />
+
+    <source srcset="/img/hero/hero-tablet.webp" media="(min-width:768px)" />
+
+    <source srcset="/img/hero/hero-mobile.webp" media="(max-width:767px)" />
+
+    <img class="hero-img" src="/img/hero/hero-bg.webp" alt="photo about me">
+
     <div class="hero-container container">
         <h1 class="hero-tittle">Hello.
             <span class="hero-tittle-part">I’m Fullstack developer Lloyd Jefferson.</span>
