@@ -19,6 +19,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    /* will-change: transform, opacity; */
     /* padding: 0 20px; */
     /* padding-top: 281px; */
 
@@ -61,12 +62,12 @@
     stroke: #65760d;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2),
+/* @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
     .hero {
         background-image: url(../img/hero/hero-mobile@2x.webp);
     }
-}
+} */
 
 @media only screen and (min-width: 768px) {
     .hero {
