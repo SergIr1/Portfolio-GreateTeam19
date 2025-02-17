@@ -59,22 +59,6 @@ body.darkstyle {
     --color-text-menu: #565656;
 }
 
-/* .darkstyle {
-  --background-color: #d4d4d4;
-  --text-color: #1c1d20;
-  --section-bg: #797979;
-  --acord-title-text: #565656;
-  --dark-bg: #565656;
-} */
-
-/* .darkstyle {
-  background-color: #d4d4d4;
-  text-color: #1c1d20;
-  section-bg: #797979;
-  acord-title-text: #565656;
-  dark-bg: #565656;
-} */
-
 .visually-hidden {
   position: absolute;
   width: 1px;
