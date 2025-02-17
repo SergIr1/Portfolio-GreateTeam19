@@ -8,7 +8,7 @@ const renderReviews = info =>{
     return `
     <li class="reviews-card swiper-slide">
                 <img class="reviews-card-avatar" alt="${info.author}" src="${info.avatar_url}" width="48" height="48"></img>
-                <h4 class="reviews-card-name">${info.author}</h4>
+                <h3 class="reviews-card-name">${info.author}</h3>
                 <p class="reviews-card-description">${info.review}</p>
             </li>
     `;
