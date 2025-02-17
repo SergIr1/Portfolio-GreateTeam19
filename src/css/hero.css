@@ -9,9 +9,9 @@
 
 .hero {
     /* background-image: url(../img/hero/hero-mobile.webp); */
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: cover; */
     max-width: 375px;
     /* min-height: 100vh; */
     /* height: 100%; */
