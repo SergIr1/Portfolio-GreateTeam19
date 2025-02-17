@@ -3,16 +3,18 @@
             width="32" height="32" aria-hidden="true">
             <use href="/img/light-up.svg#icon-light-up"></use>
         </svg></button>
-    <source srcset="/img/hero/hero-bg.webp" media="(min-width:
-                            1440px)" />
-
-    <source srcset="/img/hero/hero-tablet.webp" media="(min-width:768px)" />
-
-    <source srcset="/img/hero/hero-mobile.webp" media="(max-width:767px)"
-        sizes="(max-width: 767px) 100vw, (max-width: 1440px) 50vw, 100vw" />
-
-    <img class="hero-img" src="/img/hero/hero-mobile.webp" alt="photo about me">
     <div class="hero-container container">
+        <picture class="hero-picture">
+            <source srcset="/img/hero/hero-bg.webp" media="(min-width:
+                                        1440px)" />
+
+            <source srcset="/img/hero/hero-tablet.webp" media="(min-width:768px)" />
+
+            <source srcset="/img/hero/hero-mobile.webp" media="(max-width:767px)"
+                sizes="(max-width: 767px) 100vw, (max-width: 1440px) 50vw, 100vw" />
+
+            <img class="hero-img" src="/img/hero/hero-mobile.webp" alt="photo about me">
+        </picture>
         <h1 class="hero-tittle">Hello.
             <span class="hero-tittle-part">I’m Fullstack developer Lloyd Jefferson.</span>
         </h1>
