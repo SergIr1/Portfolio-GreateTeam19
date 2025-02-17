@@ -4,14 +4,12 @@
             <use href="/img/light-up.svg#icon-light-up"></use>
         </svg></button>
 
-    <source srcset="/img/hero/hero-bg.webp" media="(min-width:
-                            1440px)" />
-
-    <source srcset="/img/hero/hero-tablet.webp" media="(min-width:768px)" />
-
-    <source srcset="/img/hero/hero-mobile.webp" media="(max-width:767px)" />
-
-    <img class="hero-img" src="/img/hero/hero-bg.webp" alt="photo about me">
+    <img class="hero-img" src="/img/hero/hero-bg.webp" srcset="
+        /img/hero/hero-mobile.webp 375w,
+        /img/hero/hero-tablet.webp 768w,
+        /img/hero/hero-bg.webp 1440w" sizes="(max-width: 375px) 375px, 
+            (max-width: 768px) 768px,
+            1440px" alt="photo about me" width="1440" height="900">
 
     <div class="hero-container container">
         <h1 class="hero-tittle">Hello.
